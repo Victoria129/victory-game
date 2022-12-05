@@ -10,10 +10,9 @@ test('Are they friends', () => {
   //Act
   const actual = relationship.friendship(2);
 
-
   //Assert
   expect(actual).toBe(expected);
-})
+});
 
 test('Is our relashionship improved?', () => {
   //Assign
@@ -22,9 +21,19 @@ test('Is our relashionship improved?', () => {
   //Act
   relationship.improve(1);
   const actual = relationship.improve(1);
-  
 
   //Assert
   expect(actual).toBe(expected);
-})
+});
+
+test('Is our relationshsip ruined', () => {
+  // Assign
+  const expected = -1;
+
+  // Act
+  const actual = relationship.ruine(2);
+
+  // Assert
+  expect(actual).toBe(expected);
+});
 
