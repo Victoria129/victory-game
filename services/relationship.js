@@ -7,22 +7,31 @@ class Relationship {
   }
 
   improve(characterId) {
-
-    // this._relationship[1] = this._relationship[1]+ 1;
-
-    let currentRelationship = this._relationship[1];
-    if(currentRelationship === undefined){
-     this._relationship[this._relationship[1]]; // todo: fix this line
-    }
-    
-    return this._relationship[1];
+    return this.assess(characterId, 1);
   }
 
   ruine(characterId) {
-    return -777;  // todo: implement
+    return this.assess(characterId, -1);
   }
 
   assess(characterId, direction) {
+    let currentRelationship = this._relationship[characterId];
+    if(currentRelationship === undefined){
+      this._relationship[characterId] = 0;
+    }
+
+    this._relationship[characterId] = this._relationship[characterId] + direction;
+
+    return this._relationship[characterId];
+
+  
+    // current relationship for id-1 = 0
+    // direction = 1
+    // new relationship = 1
+
+    // current relationship for id-1 = 5
+    // direction = -1
+    // new relationship = 4
 
   }
 }
