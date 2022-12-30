@@ -5,7 +5,6 @@ const quest = new Quest();
 test('Initial quest', () => {
 
 //Assign
-
 const expected = 'I need a hero';
 
 //Act
@@ -37,7 +36,6 @@ test('Complete', () => {
   //Act
   quest.complete();
   let actual = quest.talk();
-
 
   //Assert
   expect(actual).toBe(expected);
