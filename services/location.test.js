@@ -24,4 +24,30 @@ test('Changing location', () => {
 
   //Asserting
   expect(actual).toBe(expected);
-})
+});
+
+test('get item in location', () => {
+  //Assign
+  const expected = 'bottle';
+  const newLocation = 20;
+
+  //Act
+  location.changeLocation(newLocation);
+  const actual = location.getItemsAtCurrentLocation();
+
+  //Assert
+  expect(actual).toBe(expected);
+});
+
+test('find the gym', () => {
+  //Assign
+  const expected = 'gym';
+  const itemLocation = 10;
+
+  //Act
+  location.changeLocation(itemLocation);
+  const actual = location.getItemsAtCurrentLocation();
+
+  //Assert
+  expect(actual).toBe(expected);
+});
