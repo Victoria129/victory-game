@@ -1,6 +1,10 @@
 class Location {
   constructor(){
     this._location = 1;
+    this._places = {
+      20: 'bottle',
+      10: 'gym',
+    };
   }
 
   getCurrentLocation(){
@@ -12,14 +16,17 @@ class Location {
   }
 
   getItemsAtCurrentLocation(){
-    if(this._location === 20){
-      return 'bottle';
+    let currentPlace = this._places[this._location];
+    if(currentPlace === undefined){
+      return "";
     }
-    if(this._location === 10){
-      return 'gym';
-    }
-    return '';
+    return this._places[this._location];
   }
+
+  placeItem(itemLocation, item){
+    this._places[itemLocation] = item;
+  }
+
 }
 
 module.exports = Location;

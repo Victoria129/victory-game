@@ -22,7 +22,7 @@ test('Changing location', () => {
   location.changeLocation(newLocation);
   const actual = location.getCurrentLocation();
 
-  //Asserting
+  //Assert
   expect(actual).toBe(expected);
 });
 
@@ -51,3 +51,17 @@ test('find the gym', () => {
   //Assert
   expect(actual).toBe(expected);
 });
+
+test('find the quest', () => {
+  //Assign
+  const expected = 'quest';
+  const itemLocation = 30;
+
+  //Act
+  location.placeItem(itemLocation, expected);
+  location.changeLocation(itemLocation);
+  const actual = location.getItemsAtCurrentLocation();
+
+  //Assert
+  expect(actual).toBe(expected);
+})
