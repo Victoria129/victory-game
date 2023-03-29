@@ -25,9 +25,9 @@ class Storage {
   }
 
   countNumberofItems(){
+    return this._items.length;
 
   }
-
 
 }
 

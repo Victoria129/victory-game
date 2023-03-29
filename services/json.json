@@ -1,0 +1,13 @@
+{
+  "name": "entrance",
+  "north": {
+    "name": "Victoria",
+    "north": null,
+    "south": null
+  },
+  "south": {
+    "name": "Alex",
+    "north": null,
+    "south": null
+  }
+}

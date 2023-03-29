@@ -33,7 +33,7 @@ test('add item', () => {
 test('delete item', () => {
 
   //Assign
-  const expected = new Item('name', 'description', 'category')
+  const expected = new Item('name', 'description', 'category');
 
   //Act
   storage.removeItem(expected);
@@ -41,4 +41,17 @@ test('delete item', () => {
 
   //Assert
   expect(actual.length).toBe(0);
-})
+});
+
+test('count number of items', () => {
+
+  // Assign
+  storage.addItem(new Item('', '', ''));
+  storage.addItem(new Item('', '', ''));
+
+  //Act
+  let actual = storage.countNumberofItems();
+
+  // Assert
+  expect(actual).toBe(2);
+});
