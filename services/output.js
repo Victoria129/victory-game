@@ -3,9 +3,12 @@ class Output {
 
   }
 
-
   displayRoom(room){
-    return room.name;
+    return `${room.name}\n north: ${room.north.name}`;
+  }
+
+  displayQuest(quest){
+    return quest.name;
   }
 }
 

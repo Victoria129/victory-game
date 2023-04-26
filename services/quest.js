@@ -1,6 +1,7 @@
 class Quest {
-  constructor() {
+  constructor(name) {
     this._isAccepted = false;
+    this.name = name;
   }
 
   talk() {
